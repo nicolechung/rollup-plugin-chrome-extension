@@ -9,7 +9,7 @@ specifiers:
   '@rollup/plugin-node-resolve': 13.1.1
   '@rollup/pluginutils': ^4.1.1
   '@testing-library/dom': 8.11.1
-  '@testing-library/jest-dom': 5.16.1
+  '@testing-library/jest-dom': 5.16.5
   '@types/acorn': ^4.0.6
   '@types/chrome': 0.0.176
   '@types/csp-dev': ^1.0.0
@@ -119,7 +119,7 @@ devDependencies:
   '@rollup/plugin-json': 4.1.0_rollup@2.61.1
   '@rollup/plugin-node-resolve': 13.1.1_rollup@2.61.1
   '@testing-library/dom': 8.11.1
-  '@testing-library/jest-dom': 5.16.1
+  '@testing-library/jest-dom': 5.16.5
   '@types/chrome': 0.0.176
   '@types/fs-extra': 9.0.13
   '@types/glob': 7.2.0
@@ -157,6 +157,10 @@ devDependencies:
   ws: 8.4.0
 
 packages:
+
+  /@adobe/css-tools/4.2.0:
+    resolution: {integrity: sha512-E09FiIft46CmH5Qnjb0wsW54/YQd69LsxeKUOWawmws1XWvyFGURnAChH0mlr7YPFR1ofwvUQfcL0J3lMxXqPA==}
+    dev: true
 
   /@babel/code-frame/7.16.0:
     resolution: {integrity: sha512-IF4EOMEV+bfYwOmNxGzSnjR2EmQod7f1UXOpZM3l4i4o4QNwzjtJAu/HxdjHq0aYBvdqMuQEY1eg0nqW9ZPORA==}
@@ -325,6 +329,8 @@ packages:
     resolution: {integrity: sha512-Gr86ujcNuPDnNOY8mi383Hvi8IYrJVJYuf3XcuBM/Dgd+bINn/7tHqsj+tKkoreMbmGsFLsltI/JJd8fOFWGDQ==}
     engines: {node: '>=6.0.0'}
     hasBin: true
+    dependencies:
+      '@babel/types': 7.16.0
     dev: true
 
   /@babel/plugin-syntax-async-generators/7.8.4_@babel+core@7.16.5:
@@ -887,15 +893,15 @@ packages:
       pretty-format: 27.4.2
     dev: true
 
-  /@testing-library/jest-dom/5.16.1:
-    resolution: {integrity: sha512-ajUJdfDIuTCadB79ukO+0l8O+QwN0LiSxDaYUTI4LndbbUsGi6rWU1SCexXzBA2NSjlVB9/vbkasQIL3tmPBjw==}
+  /@testing-library/jest-dom/5.16.5:
+    resolution: {integrity: sha512-N5ixQ2qKpi5OLYfwQmUb/5mSV9LneAcaUfp32pn4yCnpb8r/Yz0pXFPck21dIicKmi+ta5WRAknkZCfA8refMA==}
     engines: {node: '>=8', npm: '>=6', yarn: '>=1'}
     dependencies:
+      '@adobe/css-tools': 4.2.0
       '@babel/runtime': 7.13.8
       '@types/testing-library__jest-dom': 5.9.5
       aria-query: 5.0.0
       chalk: 3.0.0
-      css: 3.0.0
       css.escape: 1.5.1
       dom-accessibility-api: 0.5.10
       lodash: 4.17.21
@@ -1457,12 +1463,6 @@ packages:
     engines: {node: '>= 4.0.0'}
     dev: true
 
-  /atob/2.1.2:
-    resolution: {integrity: sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==}
-    engines: {node: '>= 4.5.0'}
-    hasBin: true
-    dev: true
-
   /babel-jest/27.4.5_@babel+core@7.16.5:
     resolution: {integrity: sha512-3uuUTjXbgtODmSv/DXO9nZfD52IyC2OYTFaXGRzL0kpykzroaquCrD5+lZNafTvZlnNqZHt5pb0M08qVBZnsnA==}
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
@@ -1813,15 +1813,7 @@ packages:
     dev: false
 
   /css.escape/1.5.1:
-    resolution: {integrity: sha1-QuJ9T6BK4y+TGktNQZH6nN3ul8s=}
-    dev: true
-
-  /css/3.0.0:
-    resolution: {integrity: sha512-DG9pFfwOrzc+hawpmqX/dHYHJG+Bsdb0klhyi1sDneOgGOXy9wQIC8hzyVp1e4NRYDBdxcylvywPkkXCHAzTyQ==}
-    dependencies:
-      inherits: 2.0.4
-      source-map: 0.6.1
-      source-map-resolve: 0.6.0
+    resolution: {integrity: sha512-YUifsXXuknHlUsmlgyY0PKzgPOr7/FjCePfHNt0jxm83wHZi44VDMQ7/fGNkjY3/jV1MC+1CmZbaHzugyeRtpg==}
     dev: true
 
   /cssom/0.3.8:
@@ -1866,11 +1858,6 @@ packages:
 
   /decimal.js/10.3.1:
     resolution: {integrity: sha512-V0pfhfr8suzyPGOx3nmq4aHqabehUZn6Ch9kyFpV79TGDTWFmHqUqXdabR7QHqxzrYolF4+tVmJhUG4OURg5dQ==}
-    dev: true
-
-  /decode-uri-component/0.2.0:
-    resolution: {integrity: sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=}
-    engines: {node: '>=0.10'}
     dev: true
 
   /dedent/0.7.0:
@@ -2052,7 +2039,6 @@ packages:
     cpu: [arm64]
     os: [android]
     requiresBuild: true
-    dev: false
     optional: true
 
   /esbuild-darwin-64/0.13.14:
@@ -2068,7 +2054,6 @@ packages:
     cpu: [x64]
     os: [darwin]
     requiresBuild: true
-    dev: false
     optional: true
 
   /esbuild-darwin-arm64/0.13.14:
@@ -2084,7 +2069,6 @@ packages:
     cpu: [arm64]
     os: [darwin]
     requiresBuild: true
-    dev: false
     optional: true
 
   /esbuild-freebsd-64/0.13.14:
@@ -2100,7 +2084,6 @@ packages:
     cpu: [x64]
     os: [freebsd]
     requiresBuild: true
-    dev: false
     optional: true
 
   /esbuild-freebsd-arm64/0.13.14:
@@ -2116,7 +2099,6 @@ packages:
     cpu: [arm64]
     os: [freebsd]
     requiresBuild: true
-    dev: false
     optional: true
 
   /esbuild-linux-32/0.13.14:
@@ -2132,7 +2114,6 @@ packages:
     cpu: [ia32]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /esbuild-linux-64/0.13.14:
@@ -2148,7 +2129,6 @@ packages:
     cpu: [x64]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /esbuild-linux-arm/0.13.14:
@@ -2164,7 +2144,6 @@ packages:
     cpu: [arm]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /esbuild-linux-arm64/0.13.14:
@@ -2180,7 +2159,6 @@ packages:
     cpu: [arm64]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /esbuild-linux-mips64le/0.13.14:
@@ -2196,7 +2174,6 @@ packages:
     cpu: [mips64el]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /esbuild-linux-ppc64le/0.13.14:
@@ -2212,7 +2189,6 @@ packages:
     cpu: [ppc64]
     os: [linux]
     requiresBuild: true
-    dev: false
     optional: true
 
   /esbuild-netbsd-64/0.13.14:
@@ -2228,7 +2204,6 @@ packages:
     cpu: [x64]
     os: [netbsd]
     requiresBuild: true
-    dev: false
     optional: true
 
   /esbuild-openbsd-64/0.13.14:
@@ -2244,7 +2219,6 @@ packages:
     cpu: [x64]
     os: [openbsd]
     requiresBuild: true
-    dev: false
     optional: true
 
   /esbuild-runner/2.2.1_esbuild@0.14.5:
@@ -2271,7 +2245,6 @@ packages:
     cpu: [x64]
     os: [sunos]
     requiresBuild: true
-    dev: false
     optional: true
 
   /esbuild-windows-32/0.13.14:
@@ -2287,7 +2260,6 @@ packages:
     cpu: [ia32]
     os: [win32]
     requiresBuild: true
-    dev: false
     optional: true
 
   /esbuild-windows-64/0.13.14:
@@ -2303,7 +2275,6 @@ packages:
     cpu: [x64]
     os: [win32]
     requiresBuild: true
-    dev: false
     optional: true
 
   /esbuild-windows-arm64/0.13.14:
@@ -2319,7 +2290,6 @@ packages:
     cpu: [arm64]
     os: [win32]
     requiresBuild: true
-    dev: false
     optional: true
 
   /esbuild/0.13.14:
@@ -2368,7 +2338,6 @@ packages:
       esbuild-windows-32: 0.14.5
       esbuild-windows-64: 0.14.5
       esbuild-windows-arm64: 0.14.5
-    dev: false
 
   /escalade/3.1.1:
     resolution: {integrity: sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==}
@@ -4852,13 +4821,6 @@ packages:
   /source-map-js/1.0.1:
     resolution: {integrity: sha512-4+TN2b3tqOCd/kaGRJ/sTYA0tR0mdXx26ipdolxcwtJVqEnqNYvlCAt1q3ypy4QMlYus+Zh34RNtYLoq2oQ4IA==}
     engines: {node: '>=0.10.0'}
-    dev: true
-
-  /source-map-resolve/0.6.0:
-    resolution: {integrity: sha512-KXBr9d/fO/bWo97NXsPIAW1bFSBOuCnjbNTBMO7N59hsv5i9yzRDfcYwwt0l04+VqnKC+EwzvJZIP/qkuMgR/w==}
-    dependencies:
-      atob: 2.1.2
-      decode-uri-component: 0.2.0
     dev: true
 
   /source-map-support/0.5.19:
